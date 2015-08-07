@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f0e8"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+
+        >
+
+        <Spinner
+          android:layout_width="280dp"
+          android:layout_height="60dp"
+          android:id="@+id/sp_class"
+
+          ></Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+
+        >
+
+        <Spinner
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:id="@+id/sp_weight"
+
+            ></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        >
+        <EditText
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:hint="最長邊(cm)"
+            android:gravity="center"
+            android:id="@+id/ed_long"
+            android:inputType="number"/>
+        <EditText
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:hint="次長邊(cm)"
+            android:gravity="center"
+            android:id="@+id/ed_mid"
+            android:inputType="number"
+            />
+        <EditText
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:hint="最短邊(cm)"
+            android:gravity="center"
+            android:id="@+id/ed_short"
+            android:inputType="number"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp">
+
+        <Spinner
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:id="@+id/sp_from"
+            ></Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp">
+
+        <Spinner
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:id="@+id/sp_to"
+
+            ></Spinner>
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:text="送出"
+        android:id="@+id/button"/>
+</LinearLayout>
