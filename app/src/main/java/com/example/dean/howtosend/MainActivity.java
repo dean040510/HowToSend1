@@ -1,5 +1,7 @@
 package com.example.dean.howtosend;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Typeface;
@@ -220,11 +222,31 @@ public class MainActivity extends ActionBarActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Thread thread = new searchThread();
-                thread.start();
+                if(sp_class.getSelectedItem()!=null&&sp_from.getSelectedItem()!=null
+                        &&sp_to.getSelectedItem()!=null&&sp_weight.getSelectedItem()!=null
+                        &&ed_short.getText()!=null&&ed_long.getText()!=null&&ed_mid.getText()!=null) {
+                    Thread thread = new searchThread();
+                    thread.start();
+                }else {
+                    showMsgDialog("您輸入的資訊不夠完整喔!");
+                }
             }
         });
 
+    }
+
+    private void showMsgDialog(String msg){
+        AlertDialog.Builder mDialog = new AlertDialog.Builder(this);
+        mDialog.setTitle("溫馨提示");
+        mDialog.setMessage(msg);
+        DialogInterface.OnClickListener okClick = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        };
+        mDialog.setNeutralButton("確定",okClick);
+        mDialog.show();
     }
     private class searchThread extends Thread{
         @Override
